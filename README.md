@@ -126,11 +126,11 @@ TRUE
 
 ### Extract all constrants in order to define flux space
 
-1. $S$ :  stoichiometric matrix
+1. ***S*** :  stoichiometric matrix
 
-2. $low\_bound$ : capacity's lower bound
+2. ***low_bound*** : capacity's lower bound
 
-3. $up\_bound$ : capacity's upper bound
+3. ***up_bound*** : capacity's upper bound
 
 
 ```R
@@ -144,10 +144,10 @@ up_bound<-mod@uppbnd
 
 #### Two different constraints make the flux space:
 
-1. $Sv=0$, where $S$ is the stoichiometric matrix and $v$ a unknown vector we are looking for.
-2. $a_i\leq v_i\leq b_i$, where $a_i$ defined by $low\_bound$ and $b_i$ by $up\_bound$
+1. ***Sv=0***, where ***S*** is the stoichiometric matrix and ***v*** a unknown vector we are looking for.
+2. ***ai<=vi<=bi***, where ***ai*** defined by ***low_bound*** and ***bi*** by ***up_bound***
 
-In oder to represent these constraints we consider the linear inequality $Ax\leq b$. So we construct $A$ matrix and $b$ vector.
+In oder to represent these constraints we consider the linear inequality ***Ax<=b***. So we construct ***A*** matrix and ***b*** vector.
 
 
 ```R
@@ -172,7 +172,7 @@ b<-rbind(t(matrix(up_bound,nrow = 1,ncol = n)),
 
 ### Polytope's Construction and Sampling
 
-#### A Convex polytope can be described as  $Ax\leq b$ linear inequality.
+#### A Convex polytope can be described as  ***Ax<=b*** linear inequality.
 
 
 ```R
