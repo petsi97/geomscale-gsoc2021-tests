@@ -134,7 +134,7 @@ TRUE
 
 
 ```R
-S<- (as.matrix(S(Ec_core)))
+S<- (as.matrix(S(mod)))
 
 low_bound<-mod@lowbnd
 up_bound<-mod@uppbnd
